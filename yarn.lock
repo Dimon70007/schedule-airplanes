@@ -1022,13 +1022,6 @@ babel-register@^6.24.1:
     mkdirp "^0.5.1"
     source-map-support "^0.4.2"
 
-babel-runtime@^6.11.6:
-  version "6.25.0"
-  resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.25.0.tgz#33b98eaa5d482bb01a8d1aa6b437ad2b01aec41c"
-  dependencies:
-    core-js "^2.4.0"
-    regenerator-runtime "^0.10.0"
-
 babel-runtime@^6.18.0, babel-runtime@^6.2.0, babel-runtime@^6.22.0, babel-runtime@^6.23.0, babel-runtime@^6.6.1:
   version "6.23.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.23.0.tgz#0a9489f144de70efb3ce4300accdb329e2fc543b"
@@ -1468,10 +1461,6 @@ clap@^1.0.9:
   resolved "https://registry.yarnpkg.com/clap/-/clap-1.2.0.tgz#59c90fe3e137104746ff19469a27a634ff68c857"
   dependencies:
     chalk "^1.1.3"
-
-classnames@^2.2.3:
-  version "2.2.5"
-  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
 
 clean-css@4.1.x:
   version "4.1.4"
@@ -2096,10 +2085,6 @@ dom-converter@~0.1:
   resolved "https://registry.yarnpkg.com/dom-converter/-/dom-converter-0.1.4.tgz#a45ef5727b890c9bffe6d7c876e7b19cb0e17f3b"
   dependencies:
     utila "~0.3"
-
-"dom-helpers@^2.4.0 || ^3.0.0":
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/dom-helpers/-/dom-helpers-3.2.1.tgz#3203e07fed217bd1f424b019735582fc37b2825a"
 
 dom-serializer@0:
   version "0.1.0"
@@ -2730,18 +2715,6 @@ fb-watchman@^2.0.0:
   resolved "https://registry.yarnpkg.com/fb-watchman/-/fb-watchman-2.0.0.tgz#54e9abf7dfa2f26cd9b1636c588c1afc05de5d58"
   dependencies:
     bser "^2.0.0"
-
-fbjs@^0.8.4:
-  version "0.8.14"
-  resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.14.tgz#d1dbe2be254c35a91e09f31f9cd50a40b2a0ed1c"
-  dependencies:
-    core-js "^1.0.0"
-    isomorphic-fetch "^2.1.1"
-    loose-envify "^1.0.0"
-    object-assign "^4.1.0"
-    promise "^7.1.1"
-    setimmediate "^1.0.5"
-    ua-parser-js "^0.7.9"
 
 fbjs@^0.8.9:
   version "0.8.12"
@@ -4566,7 +4539,7 @@ longest@^1.0.0, longest@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/longest/-/longest-1.0.1.tgz#30a0b2da38f73770e8294a0d22e6625ed77d0097"
 
-loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.0, loose-envify@^1.3.1:
+loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.3.1.tgz#d1a8ad33fa9ce0e713d65fdd0ac8b748d478c848"
   dependencies:
@@ -5748,7 +5721,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@15, prop-types@^15.0.0, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.7, prop-types@^15.5.8:
+prop-types@^15.0.0, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.7, prop-types@^15.5.8:
   version "15.5.10"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.10.tgz#2797dfc3126182e3a95e3dfbb2e893ddd7456154"
   dependencies:
@@ -5858,14 +5831,6 @@ rc@^1.1.2, rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-addons-create-fragment@^15.0.1:
-  version "15.6.0"
-  resolved "https://registry.yarnpkg.com/react-addons-create-fragment/-/react-addons-create-fragment-15.6.0.tgz#af91a22b1fb095dd01f1afba43bfd0ef589d8b20"
-  dependencies:
-    fbjs "^0.8.4"
-    loose-envify "^1.3.1"
-    object-assign "^4.1.0"
-
 react-base16-styling@^0.5.1:
   version "0.5.3"
   resolved "https://registry.yarnpkg.com/react-base16-styling/-/react-base16-styling-0.5.3.tgz#3858f24e9c4dd8cbd3f702f3f74d581ca2917269"
@@ -5914,18 +5879,6 @@ react-json-tree@^0.10.8:
     prop-types "^15.5.8"
     react-base16-styling "^0.5.1"
 
-react-list-view@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/react-list-view/-/react-list-view-1.0.0.tgz#6ba2d5aa43a6e962061a4b6af520c313884ff2b4"
-  dependencies:
-    react-addons-create-fragment "^15.0.1"
-
-react-list@^0.8.6:
-  version "0.8.6"
-  resolved "https://registry.yarnpkg.com/react-list/-/react-list-0.8.6.tgz#21c88eb332829a0b448c2502eb43064f11af38fe"
-  dependencies:
-    prop-types "15"
-
 react-loader@^2.4.2:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/react-loader/-/react-loader-2.4.2.tgz#14e2b9139fc5693da5cdbdc928032d5b1aeb94c2"
@@ -5956,10 +5909,6 @@ react-redux@^5.0.4:
     loose-envify "^1.1.0"
     prop-types "^15.5.10"
 
-react-router-redux@^4.0.8:
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/react-router-redux/-/react-router-redux-4.0.8.tgz#227403596b5151e182377dab835b5d45f0f8054e"
-
 react-test-renderer@^15.6.1:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-15.6.1.tgz#026f4a5bb5552661fd2cc4bbcd0d4bc8a35ebf7e"
@@ -5972,20 +5921,6 @@ react-tiny-virtual-list@^2.0.6:
   resolved "https://registry.yarnpkg.com/react-tiny-virtual-list/-/react-tiny-virtual-list-2.0.6.tgz#6f27d0d68e939c6e3c30739766eeb69acc1de503"
   dependencies:
     prop-types "^15.5.7"
-
-react-virtualized@^9.9.0:
-  version "9.9.0"
-  resolved "https://registry.yarnpkg.com/react-virtualized/-/react-virtualized-9.9.0.tgz#799a6f23819eeb82860d59b82fad33d1d420325e"
-  dependencies:
-    babel-runtime "^6.11.6"
-    classnames "^2.2.3"
-    dom-helpers "^2.4.0 || ^3.0.0"
-    loose-envify "^1.3.0"
-    prop-types "^15.5.4"
-
-react-visit@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/react-visit/-/react-visit-1.0.2.tgz#f55a2e99abda51a081c8756838db684b25e3fc0b"
 
 react@^15.5.4:
   version "15.6.1"

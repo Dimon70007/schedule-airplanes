@@ -34,7 +34,7 @@ const lessConfig = extractCss.extract({
   fallback: 'style-loader',
   use: lessUseProd,
 });
-const publicPath = '/git-issues-test/dist/';
+const publicPath = '/schedule-airplanes/dist/';
 
 module.exports = Merge(CommonConfig({ publicPath }), {
   devtool: 'cheap-module-source-map',
