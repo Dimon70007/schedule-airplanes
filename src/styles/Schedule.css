@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto,sans-serif;
+  color: #505050;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+table {
+  max-width: 100%;
+  background-color: transparent;
+  border-spacing: 0;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.container {
+font-size: large;
+overflow: auto;
+height: auto;
+width: 100%;
+list-style: none;
+}
+
+.oops {
+  width: 100%;
+  height: 100%;
+}
+
+.oopsImg {
+  position: relative;
+  width: auto;
+  height: auto;
+  margin: auto;
+  float: right;
+  margin: 20px;
+  padding: 15px;
+}
+
+.line {
+  background: #dd5;
+}
+
+.element {
+  width: 100%;
+  text-align: left;
+}
+
+.weather-forecast-list__table {
+    text-decoration: none;
+    width: 100%;
+    border-collapse: collapse;
+    font: 400 14px/1.4 Roboto,Arial,sans-serif;
+}
+
+.weather-forecast-list__items {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    width:100%;
+}
+
+.weather-forecast-list__item:first-of-type {
+    width: 40%;
+}
+
+.weather-forecast-list__item {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: left;
+    border-top: 1px solid #ddd;
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+}
+
+.beast404le, .beast404re {
+    position: absolute;
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s;
+    -webkit-animation-duration: 7s;
+    animation-duration: 7s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+    z-index: 2;
+}
+
+.beast404le {
+    position: absolute;
+    left: 120px;
+    top: 60px;
+    -webkit-animation-name: crazylefteye;
+    animation-name: crazylefteye;
+}
+
+.beast404re {
+    position: absolute;
+    left: 215px;
+    top: 60px;
+    -webkit-animation-name: crazyrighteye;
+    animation-name: crazyrighteye;
+}
+
+.beast {
+    float: right;
+    margin: 0;
+}
+
+iframe, img, video {
+    max-width: 100%;
+}
+
+@keyframes crazylefteye {
+  0%, 100%, 70% {
+    left: 120px;
+    top: 60px;
+}
+
+  10%, 20% {
+    left: 112px;
+    top: 50px;
+}
+
+  40% {
+    left: 140px;
+    top: 50px;
+}
+
+  50% {
+    left: 140px;
+    top: 65px;
+}
+
+  60% {
+    left: 115px;
+    top: 65px;
+}
+}
+
+
+@keyframes crazyrighteye {
+  0%, 100%, 70% {
+    left: 215px;
+    top: 60px;
+  }
+
+  10%, 20% {
+    left: 205px;
+    top: 52px;
+  }
+
+
+  40% {
+    left: 236px;
+    top: 58px;
+  }
+
+  50% {
+    left: 236px;
+    top: 68px;
+  }
+
+  60% {
+    left: 204px;
+    top: 68px;
+  }
+}

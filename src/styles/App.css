@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: helvetica, arial, sans-serif;
+  background: #fff;
+  overflow: hidden;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  display: block;
+  border: 1px solid #eee;
+}
+
+.header {
+  box-sizing: border-box;
+  background-color: white;
+  height: 15vh;
+  max-height: 400px;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  overflow-y: auto;
+}
+
+.headerText {
+
+}
+
+.scroll {
+  height: 35vh;
+  /*overflow-y: auto;*/
+}
+
+.backBtn {
+  composes: scrollElements from './Calendar.css';
+  position: absolute;
+  left: 10px;
+  top: calc(50% - 25px);
+  width: 32px;
+  height: 50px;
+  border-top-left-radius: 32px 25px;
+  border-bottom-left-radius: 32px 25px;
+  background: transparent;
+}
+
+.main {
+  font-size: large;
+  height: 45vh;
+  overflow-y: auto;
+}

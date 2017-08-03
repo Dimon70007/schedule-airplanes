@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro);
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: inherit;
+  transition-timing-function: ease-in-out;
+  transition-duration: .2S;
+}
+
+.scrollElements {
+  position: absolute;
+  cursor: pointer;
+  top: calc(50% - 43px + 5px);
+  height: 83px;
+  box-sizing: border-box;
+  background: transparent;
+  width: 32px;
+  outline: 0;
+  font-size: large;
+}
+
+.scrollElements:focus {
+}
+
+.scrollElements:hover {
+  border: 2px solid #777;
+  transform: scale(1.1);
+  padding-top: 2px;
+  background: transparent;
+}
+
+.leftScrollBtn {
+  composes: scrollElements;
+  left: 10px;
+  border-radius: 16px 0 0 16px;
+}
+
+.rightScrollBtn {
+  composes: scrollElements;
+  right: 10px;
+  border-radius: 0 16px 16px 0;
+}
+
+.container {
+  border-bottom: 1px solid #eee;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.container ul {
+  list-style: none;
+}
+
+.container > div {
+  margin: auto;
+  margin-top: 10px;
+}
+
+.selected {
+  color: #33f;
+}
+.selected::after {
+  position: absolute;
+  content: '';
+  background: rgba(0,0,0,0.1);
+  border-radius: 20px;
+  padding: 20px;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+}
+
+.element {
+  background: transparent;
+  height: auto;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+  font-size: large;
+  line-height: 1.5em;
+  border: 1px solid #eee;
+  overflow: hidden;
+  outline: 0;
+}
+
+.element:hover {
+  transform: scale(1.2);
+  padding-top: 2px;
+}
+.month {
+  text-align: left;
+  margin: 20px 20px 10px 20px;
+  font-size: large;
+}
