@@ -68,7 +68,6 @@ class App extends React.PureComponent {
 
   handleCalendarClick(objDate) {
     const strDate = objDate.strDate;
-    console.log('strDate ', strDate);
     this.props.fetchData(strDate);
   }
 

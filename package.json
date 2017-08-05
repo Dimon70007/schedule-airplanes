@@ -68,7 +68,7 @@
     "react-hot-loader": "next",
     "react-loader": "^2.4.2",
     "react-redux": "^5.0.4",
-    "react-tiny-virtual-list": "^2.0.6",
+    "react-tiny-virtual-list": "^2.0.7",
     "redux": "^3.6.0",
     "redux-devtools-extension": "^2.13.2",
     "redux-saga": "^0.15.6",
