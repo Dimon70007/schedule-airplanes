@@ -15,12 +15,13 @@ export const generateLeftAction = createSimpleAction(GENERATOR_ACTIONS[0]);
 export const generateRightAction = createSimpleAction(GENERATOR_ACTIONS[1]);
 export const dropdownGeneratorAction = createSimpleAction(GENERATOR_ACTIONS[2]);
 
-export const SCROLL_ACTIONS = ['SCROLL_LEFT', 'SCROLL_RIGHT', 'DROPDOWN_SCROLL', 'SCROLL_TO'];
+export const SCROLL_ACTIONS = ['SCROLL_LEFT', 'SCROLL_RIGHT', 'DROPDOWN_SCROLL', 'SCROLL_TO', 'SCROLL_TO_POSITION'];
 
 export const scrollLeftAction = createSimpleAction(SCROLL_ACTIONS[0]);
 export const scrollRightAction = createSimpleAction(SCROLL_ACTIONS[1]);
 export const dropDownScrollAction = createSimpleAction(SCROLL_ACTIONS[2]);
 export const scrollToAction = createSimpleAction(SCROLL_ACTIONS[3]);
+export const scrollToPositionAction = createSimpleAction(SCROLL_ACTIONS[4]);
 
 export const FETCHING_DATA = 'FETCHING_DATA';
 export const FETCHING_DATA_SUCCESS = 'FETCHING_DATA_SUCCESS';
@@ -35,16 +36,15 @@ export const SELECT_INDEX = 'SELECT_INDEX';
 
 export const selectIndexAction = createSimpleAction(SELECT_INDEX);
 
-export const fetchData = (payload) => {
+export const fetchData = (currentData) => {
   let previousLoadedData = false;
   return (dispatch) => {
-    if (previousLoadedData === payload) {
+    if (previousLoadedData === currentData) {
       return;
     }
-    previousLoadedData = payload;
-    const fetcher = getFetcher(payload);
-    dispatch(getData());
-    fetcher({})
+    previousLoadedData = currentData;
+    dispatch(getData(currentData));
+    getFetcher(currentData)({})
       .then((response) => {
         if (response.status >= 400 && response.status < 500) {
           throw new Error(`Bad response from server: ${response.statusText}`);

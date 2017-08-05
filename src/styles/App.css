@@ -31,7 +31,7 @@ body {
 }
 
 .scroll {
-  height: 35vh;
+  height: 25vh;
   /*overflow-y: auto;*/
 }
 
@@ -49,6 +49,7 @@ body {
 
 .main {
   font-size: large;
-  height: 45vh;
+  height: 55vh;
   overflow-y: auto;
+  position: relative;
 }

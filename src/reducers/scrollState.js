@@ -1,11 +1,15 @@
-import { CALENDAR_TRESHOLD } from '../constants';
+import { CALENDAR_LENGTH, APP_WIDTH } from '../constants';
 import { SCROLL_ACTIONS, SELECT_INDEX } from '../actions';
+import { idxToPosition } from '../helpers';
+
+const scrollToIndex = Math.trunc(CALENDAR_LENGTH / 2);
 
 const init = {
-  scrollToIndex: CALENDAR_TRESHOLD,
+  scrollToIndex,
   selectedIndex: -1,
+  scrolledPosition: idxToPosition(scrollToIndex, APP_WIDTH),
 };
-const [scrollLeft, scrollRight, dropDownScroll, scrollTo] = SCROLL_ACTIONS;
+const [scrollLeft, scrollRight, dropDownScroll, scrollTo, scrollToPosition] = SCROLL_ACTIONS;
 
 export default (state = init, action) => {
   switch (action.type) {
@@ -13,6 +17,11 @@ export default (state = init, action) => {
       return {
         ...state,
         selectedIndex: action.payload,
+      };
+    case scrollToPosition:
+      return {
+        ...state,
+        scrolledPosition: action.payload,
       };
     case scrollTo:
       return {

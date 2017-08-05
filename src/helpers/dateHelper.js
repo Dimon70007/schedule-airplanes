@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { CALENDAR_TRESHOLD } from '../constants';
+import { CALENDAR_TRESHOLD, CALENDAR_LENGTH } from '../constants';
 
 moment.locale('ru');
 export const datePack = (date) => {
@@ -31,10 +31,12 @@ export const getDates = (startDate, stopDate) => {
   return dateArray;
 };
 
-export const generateCalendar = (currentDate = moment(), count = CALENDAR_TRESHOLD * 2) => [
-  ...genLeftPartCalendar(currentDate, count / 2),
-  datePack(moment(currentDate)),
-  ...genRightPartCalendar(currentDate, count / 2)];
+export const generateCalendar = (
+  currentDate = moment(),
+  count = CALENDAR_LENGTH) => [
+    ...genLeftPartCalendar(currentDate, Math.trunc(count / 2)),
+    datePack(moment(currentDate)),
+    ...genRightPartCalendar(currentDate, Math.trunc(count / 2))];
 
 export const genLeftPartCalendar = (curDate = moment(), count = CALENDAR_TRESHOLD) => {
   const startDate = moment(curDate).subtract(count, 'days');

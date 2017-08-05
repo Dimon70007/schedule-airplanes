@@ -23,8 +23,8 @@ tr {
 
 .container {
 font-size: large;
-overflow: auto;
-height: auto;
+overflow-y: auto;
+height: 100%;
 width: 100%;
 list-style: none;
 }
@@ -42,15 +42,6 @@ list-style: none;
   float: right;
   margin: 20px;
   padding: 15px;
-}
-
-.line {
-  background: #dd5;
-}
-
-.element {
-  width: 100%;
-  text-align: left;
 }
 
 .weather-forecast-list__table {

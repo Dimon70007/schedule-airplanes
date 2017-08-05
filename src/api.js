@@ -7,11 +7,14 @@ const TulaId = 480562;
 export const getForecastQuery = (id = TulaId) => ({
   id,
   APPID: '0b54a198a8077b3988006e964f27dd19',
+  units: 'metric',
+  lang: 'ru',
 });
 export const getForecastQuery1 = (id = TulaId) => ({
   id,
   APPID: '0b54a198a8077b3988006e964f27dd19',
   units: 'metric',
+  lang: 'ru',
 });
 export const getHistoryQuery = ({
   start, stop, count = countPerDay, id = TulaId }) => ({
@@ -21,15 +24,20 @@ export const getHistoryQuery = ({
     end: stop,
     type: 'hour',
     cnt: count,
+    units: 'metric',
+    lang: 'ru',
   });
-export const forecastUrl1 = 'https://openweathermap.org/data/2.5/forecast/daily';
+export const forecastUrl1 = 'https://api.openweathermap.org/data/2.5/forecast/daily';
 export const forecastUrl = 'http://api.openweathermap.org/data/2.5/forecast';
 export const historyUrl = 'http://history.openweathermap.org/data/2.5/history/city';
 
-export const weatherImgUrl = (icon = '01d') => `http://openweathermap.org/img/w/${icon}.png`;
+export const weatherImgUrl = (icon = '01d') =>
+  // window.location.replace('http://api.openweathermap.org');
+   `http://api.openweathermap.org/img/w/${icon}.png`;
 
 export const fetchForecastWeather = () => ({ query = {} }) =>
-  getWeather(forecastUrl, { ...getForecastQuery(), ...query });
+  // window.location.replace('http://api.openweathermap.org');
+   getWeather(forecastUrl, { ...getForecastQuery(), ...query });
 
 export const fetchHistoryWeather = (
     startDate,
@@ -39,7 +47,8 @@ export const fetchHistoryWeather = (
   const count = Math.abs(moment(stopDate).diff(moment(startDate), 'days') * countPerDay);
   const historyQuery = getHistoryQuery({ start, stop, count });
   return ({ query = {} }) =>
-    getWeather(historyUrl, { ...historyQuery, ...query });
+    // window.location.replace('http://history.openweathermap.org');
+     getWeather(historyUrl, { ...historyQuery, ...query });
 };
 
 export const getFetcher = (targetDate = moment()) => {

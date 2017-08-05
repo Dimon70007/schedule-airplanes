@@ -9,24 +9,21 @@ const RenderItem = ({
   selectIndex,
   ...otherProps
 }) => ({ index, style }) => {
-    /* The style property contains the item's absolute position */
-  const itemProps = children[index] || {};
-  const handleOnClick = props => (event) => {
+  const handleOnClick = props => () => {
     // event.stopPropagation();
-    console.log('onClickEvemt', event);
     selectIndex(index);
     onClick(props);
   };
+    /* The style property contains the item's absolute position */
+  const itemProps = children[index] || {};
   const onFocus = idx => event => handleFocus(idx, event);
   return (
     <div
       key={itemProps.id}
-      style={{ ...style, 'box-sizing': 'border-box' }}
-      onFocus={onFocus(index)}
-      role='button'
-      tabIndex={-1}
+      style={{ ...style, boxSizing: 'border-box' }}
     >
       <Child
+        onFocus={onFocus(index)}
         onClick={handleOnClick(itemProps)}
         key={itemProps.id}
         selected={index === selectedIndex}

@@ -1,14 +1,13 @@
 import React from 'react';
 import { CalendarCss } from '../styles';
 import NavBtn from './NavBtn';
-import { isDatesEquals } from '../helpers';
 
 const CalendarElement = (props) => {
   const {
     date,
     getCost,
     selected,
-    // index,
+    onFocus,
   onClick } = props;
 
   const dateClass = selected ?
@@ -18,8 +17,7 @@ const CalendarElement = (props) => {
     <NavBtn
       className={CalendarCss.element}
       onClick={onClick}
-      // role='button'
-      // tabIndex={-1}
+      onFocus={onFocus}
     >
       <p className={CalendarCss.line}>{props.dayOfWeek}</p>
       <span className={dateClass}>{date}</span>

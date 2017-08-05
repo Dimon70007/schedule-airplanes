@@ -59,15 +59,15 @@ const ScheduleElement = ({
           </td>
           <td className={ScheduleCss['weather-forecast-list__item']}>
             <span className={ScheduleCss['weather-forecast-list__day']}>
-              {Math.round(tempMax - 273)} °C
+              {Math.round(tempMax)} °C
             </span>&nbsp;
             <span className={ScheduleCss['weather-forecast-list__night']}>
-              {Math.round(tempMin - 273)} °C
+              {Math.round(tempMin)} °C
             </span>
             &nbsp;
             <i className={ScheduleCss['weather-forecast-list__naturalPhenomenon']}>{description}</i>
             <p>{`${speed} m/s`}&nbsp;<br />{`Влажность: ${all} %`},&nbsp;&nbsp;
-                {`${pressure} hpa`}
+              {`${pressure} hpa`}
             </p>
           </td>
         </tr>
