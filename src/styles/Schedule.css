@@ -27,6 +27,8 @@ overflow-y: auto;
 height: 100%;
 width: 100%;
 list-style: none;
+/*padding-top: */
+color: #9a9da4;
 }
 
 .oops {
@@ -70,6 +72,39 @@ list-style: none;
     padding: 8px;
     line-height: 1.42857143;
     vertical-align: top;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000;
+
+}
+.weather-forecast-list__day {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+  background: #f0ad4e;
+  margin-right: 5px;
+}
+
+.weather-forecast-list__night {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+  background: #999;
+  margin-right: 15px;
 }
 
 .beast404le, .beast404re {

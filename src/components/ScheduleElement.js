@@ -44,7 +44,8 @@ const ScheduleElement = ({
   clouds: { all },
 }) => (
 // <div className={ScheduleCss.element}>
-//   <p className={ScheduleCss.timeStartEnd}>{startTime} <b className={AppCss}>-</b> {endTime}</p>
+//   <p className={ScheduleCss.timeStartEnd}>
+//   {startTime} <b className={AppCss.imgFont}> fa-long-arrow-right [&#xf178;]</b> {endTime}</p>
 //   <p className={ScheduleCss.line}>{`${startPoint} - ${endPoint}`}</p>
 //   <p className={ScheduleCss.line}>{`Время в пути: ${timeInPath}`}</p>
 //   <p className={ScheduleCss.cost}>{'от '}<b>{cost}</b></p>

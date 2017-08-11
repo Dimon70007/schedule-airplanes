@@ -2,11 +2,14 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Loader from 'react-loader';
+/* eslint-disable */
+/* eslint-enable */
 import {
   CalendarScroll,
   CalendarElement,
   ScheduleElement,
   List,
+  NavBtn,
 } from '../components';
 import { fetchData, setAppSizeAction } from '../actions';
 import { /* , VISIBLE_ITEMS_COUNT */} from '../constants';
@@ -77,7 +80,7 @@ class App extends React.PureComponent {
 
   render() {
     const {
-      appSize: { width, height },
+      appSize: { width },
       calendarItems = [],
       fetchedData = [],
       // fetchingSuccess,
@@ -110,11 +113,18 @@ class App extends React.PureComponent {
         style={{ width: `${width}px` }}
       >
         <div className={AppCss.header}>
-          <input type='button' name='back' className={AppCss.backBtn} value='<' />
+          <NavBtn
+            name='back'
+            className={AppCss.backBtn}
+          >
+            <span className={SpecialFontCss.iconFont} >&#xf104;</span>
+          </NavBtn>
           <h2 className={AppCss.headerText}>
-            Тула<b className={SpecialFontCss.font1}> - </b>Сочи
+            Тула <span className={SpecialFontCss.iconFont} >
+            &#xf072;</span> Сочи
           </h2>
-          <p>{'Шаг 1 из 5. Выберите рейс "Туда"'}</p>
+          <p className={AppCss.headerParagraph}>
+            {'Шаг 1 из 5. Выберите рейс «Туда»'}</p>
         </div>
         <div className={AppCss.scroll}>
           <CalendarScroll
@@ -125,11 +135,14 @@ class App extends React.PureComponent {
           >
             {calendarItems}
           </CalendarScroll>
+        </div>
+        <div className={AppCss.header2}>
           <h2>
             ПРЯМЫЕ РЕЙСЫ
           </h2>
         </div>
         <div className={AppCss.main}>
+
           <div>
             {scheduleList}
           </div>

@@ -27,13 +27,14 @@ export const getHistoryQuery = ({
     units: 'metric',
     lang: 'ru',
   });
+export const prefix = 'https://cors-anywhere.herokuapp.com/';
 export const forecastUrl1 = 'https://api.openweathermap.org/data/2.5/forecast/daily';
 export const forecastUrl = 'http://api.openweathermap.org/data/2.5/forecast';
 export const historyUrl = 'http://history.openweathermap.org/data/2.5/history/city';
 
 export const weatherImgUrl = (icon = '01d') =>
   // window.location.replace('http://api.openweathermap.org');
-   `http://api.openweathermap.org/img/w/${icon}.png`;
+   `https://www.dropbox.com/sh/40ozkeytc5tasmh/AABryDjhtwm3JVWwI8QZdaHVa?dl=1/${icon}.png`;
 
 export const fetchForecastWeather = () => ({ query = {} }) =>
   // window.location.replace('http://api.openweathermap.org');
@@ -66,7 +67,7 @@ export const getFetcher = (targetDate = moment()) => {
 };
 
 const getWeather = (newPath = '', query = {}) => {
-  const urlWithParams = mergeurlQuery(newPath, query);
+  const urlWithParams = mergeurlQuery(`${prefix}${newPath}`, query);
   // console.log('urlWithParams ', urlWithParams);
   return fetch(urlWithParams);
 };

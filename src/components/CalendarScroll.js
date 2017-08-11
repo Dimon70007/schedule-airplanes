@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import VirtualList from 'react-tiny-virtual-list';
 import { scrollToAction, scrollToPositionAction, generateLeftAction, generateRightAction, selectIndexAction } from '../actions';
-import { CALENDAR_TRESHOLD, CALENDAR_ITEM_WIDTH, CALENDAR_ITEM_HEIGHT, CALENDAR_LENGTH } from '../constants';
+import { CALENDAR_TRESHOLD, CALENDAR_ITEM_WIDTH, CALENDAR_ITEM_HEIGHT } from '../constants';
 import RenderItem from './RenderItem';
-import { idxToPosition, positionToIdx, getVisibleItemsCount } from '../helpers';
+import { idxToPosition, positionToIdx } from '../helpers';
 import { CalendarCss, SpecialFontCss } from '../styles';
 
 const noop = () => {};
@@ -33,16 +33,16 @@ class CalendarScroll extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     const {
-      selectedIndex: oldSelectedIndex,
+      // selectedIndex: oldSelectedIndex,
       scrolledIndex,
-      scrolledPosition: oldPosition,
+      // scrolledPosition: oldPosition,
       } = this.props;
     const {
       scrolledPosition: nextPosition,
       scrollToPosition,
       width: nextWidth,
       scrolledIndex: nextIndex,
-      selectedIndex,
+      // selectedIndex,
       scrollTo,
       generateLeft,
       generateRight,
@@ -160,13 +160,18 @@ class CalendarScroll extends React.Component {
       />);
     return (
       <div>
-        <p className={CalendarCss.month}>
-          <b className={SpecialFontCss.font1}>
-          calImg</b> {`${children[scrolledIndex].month}`}
-        </p>
+        <div className={CalendarCss.monthContainer}>
+          <p className={CalendarCss.month}>
+            <span className={SpecialFontCss.iconFont} >
+              &#xf133;
+            </span>
+            {`   ${children[scrolledIndex].month}`}
+          </p>
+        </div>
         <div className={CalendarCss.container}>
           {list}
         </div>
+        <div className={CalendarCss.margin} />
       </div>
     );
   }

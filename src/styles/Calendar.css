@@ -41,11 +41,21 @@
 }
 
 .container {
-  border-bottom: 1px solid #eee;
-  height: 100px;
   width: 100%;
+  /*height: calc(100% + 20px);*/
   overflow: hidden;
   box-sizing: border-box;
+  color: #292a2c;
+  position: relative;
+}
+.container::after {
+  position: absolute;
+  content: '';
+  width:100%;
+  height: 15px;
+  top: calc(100% - 15px);
+  left:0;
+  background: #fff;
 }
 .container ul {
   list-style: none;
@@ -53,26 +63,37 @@
 
 .container > div {
   margin: auto;
-  margin-top: 10px;
-  /*height: 100px;*/
+  /*height: 130px;*/
+  box-sizing: border-box;
+}
+
+.monthContainer {
+  height: 70px;
+  text-align: left;
+  padding: 35px 0 0 35px;
+  margin-bottom: 15px;
+  font-size: large;
+  box-sizing: border-box;
 }
 
 .selected {
-  color: #33f;
+  color: #2a4795;
+  z-index: 2;
 }
-.selected::after {
+.selected::before {
   position: absolute;
+  z-index: -1;
   content: '';
-  background: rgba(0,0,0,0.1);
-  border-radius: 20px;
-  padding: 20px;
-  top: calc(50% - 20px);
-  left: calc(50% - 20px);
+  background: rgba(241,248,247,0.5);
+  border-radius: 25px;
+  padding: 25px;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
 }
 
 .element {
   background: transparent;
-  height: auto;
+  height: 120px;
   width: 100%;
   cursor: pointer;
   text-align: center;
@@ -83,12 +104,19 @@
   outline: 0;
 }
 
+.element p {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
 .element:hover {
   transform: scale(1.2);
-  padding-top: 2px;
+  padding-top: 5px;
 }
 .month {
-  text-align: left;
-  margin: 20px 20px 10px 20px;
-  font-size: large;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
 }

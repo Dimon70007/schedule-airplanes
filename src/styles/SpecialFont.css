@@ -1,3 +1,23 @@
-.font1 {
-    
+@font-face {
+  font-family: 'fontAwesome';
+  composes: fa-chevron-left from './fonts/font-awesome-4.7.0/css/font-awesome.css';
+
+  /*src: url('fonts/Signify Lite/Web Font (Lite)/signifylite-webfont.eot');
+  src: url('fonts/Signify Lite/Web Font (Lite)/signifylite-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/Signify Lite/Web Font (Lite)/signifylite-webfont.woff') format('woff'),
+       url('fonts/Signify Lite/Web Font (Lite)/signifylite-webfont.ttf') format('truetype'),
+       url('fonts/Signify Lite/Web Font (Lite)/signifylite-webfont.svg#SignifyLite') format('svg');*/
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+.iconFont {
+  font-family: fontAwesome;
+  font-weight: normal;
+  font-size: 1em;
+}
+
+.fa-chevron-left {
+  composes: fa-chevron-left from './fonts/font-awesome-4.7.0/css/font-awesome.css';
 }

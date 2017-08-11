@@ -20,7 +20,7 @@ const CalendarElement = (props) => {
       onFocus={onFocus}
     >
       <p className={CalendarCss.line}>{props.dayOfWeek}</p>
-      <span className={dateClass}>{date}</span>
+      <p className={dateClass}>{date}</p>
       <p className={CalendarCss.line}>{getCost(date)} °C</p>
     </NavBtn>
   );

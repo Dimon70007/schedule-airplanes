@@ -96,8 +96,8 @@ const CalendarScroll = ({
   return (
     <div className={CalendarCss.container}>
       <p className={CalendarCss.month}>
-        <b className={SpecialFontCss.font1}>
-        calImg</b> {`${children[scrolledIndex].month}`}
+        <b className={SpecialFontCss.iconFont}>
+          {/*  fa-calendar-o [&#xf133;] */}</b> {`${children[scrolledIndex].month}`}
       </p>
       <div className={CalendarCss['horizontal-parent']}>
         <div className={CalendarCss['horizontal-child']}>
