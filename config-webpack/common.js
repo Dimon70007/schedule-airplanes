@@ -31,7 +31,7 @@ module.exports = ({ publicPath }) => ({
         use: 'eslint-loader',
       },
       {
-        test: /\.(gif|ico|svg)$/i,
+        test: /\.(gif|ico|svg|png)$/i,
         use: [
           'file-loader?name=[name].[ext]&limit=10000&outputPath=imgs/',
         ],

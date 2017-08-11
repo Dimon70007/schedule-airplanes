@@ -79,18 +79,19 @@ module.exports = Merge(CommonConfig({ publicPath }), {
         test: /\.(jpe?g|png)$/i,
         use: [
           'file-loader?name=[name].[ext]&limit=10000&outputPath=imgs/',
-          {
-            loader: 'image-webpack-loader',
-            options: {
-              progressive: true,
-              pngquant: {
-                optimizationLevel: 7,
-                interlaced: false,
-                quality: '65-90',
-                speed: 9,
-              },
-            },
-          },
+          'image-webpack-loader',
+          // {
+          //   loader: 'image-webpack-loader',
+            // options: {
+            //   progressive: true,
+            //   pngquant: {
+            //     optimizationLevel: 7,
+            //     interlaced: false,
+            //     quality: '65-90',
+            //     speed: 9,
+            //   },
+            // },
+          // },
         ],
       },
       {

@@ -5,6 +5,7 @@ body {
   font-family: helvetica, arial, sans-serif;
   background: #fff;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .genericFont {

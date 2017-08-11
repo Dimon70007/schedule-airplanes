@@ -34,7 +34,7 @@ export const historyUrl = 'http://history.openweathermap.org/data/2.5/history/ci
 
 export const weatherImgUrl = (icon = '01d') =>
   // window.location.replace('http://api.openweathermap.org');
-   `https://www.dropbox.com/sh/40ozkeytc5tasmh/AABryDjhtwm3JVWwI8QZdaHVa?dl=1/${icon}.png`;
+   `./imgs/${icon}.png`;
 
 export const fetchForecastWeather = () => ({ query = {} }) =>
   // window.location.replace('http://api.openweathermap.org');
