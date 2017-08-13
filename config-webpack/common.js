@@ -33,7 +33,14 @@ module.exports = ({ publicPath }) => ({
       {
         test: /\.(gif|ico|svg|png)$/i,
         use: [
-          'file-loader?name=[name].[ext]&limit=10000&outputPath=imgs/',
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              limit: 10000,
+              outputPath: 'imgs/',
+            },
+          },
         ],
       },
       {

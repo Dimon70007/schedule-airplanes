@@ -56,7 +56,7 @@ const ScheduleElement = ({
         <tr className={ScheduleCss['weather-forecast-list__items']}>
           <td className={ScheduleCss['weather-forecast-list__item']}>
             {moment(dtTxt).format('dddd, Do MMMM, HH:mm')}
-            <img src={weatherImgUrl(icon)} alt='forecast' />
+            <img src={weatherImgUrl(icon)} alt={`${icon}.png`} />
           </td>
           <td className={ScheduleCss['weather-forecast-list__item']}>
             <span className={ScheduleCss['weather-forecast-list__day']}>
